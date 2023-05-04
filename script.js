@@ -1,11 +1,10 @@
-let x = document.querySelector(".x");
-let o = document.querySelector(".o");
-let boxes = document.querySelector(".box");
-let buttons = document.querySelector("#buttons-container button");
+let x = document.querySelector('.x');
+let o = document.querySelector('.o');
+let boxes = document.querySelectorAll('.box');
+let buttons = document.querySelectorAll('#buttons-container button');
 let messageContainer = document.querySelector("#message");
 let messageText = document.querySelector("#message p");
 let secondPlayer;
-let btn = document.querySelector("#2-players");
 
 //contador de jogadas
 
@@ -31,4 +30,4 @@ for(let i = 0; i < boxes.length; i++){
 
         this.appendChild(cloneEl);
     });
-};
+}
