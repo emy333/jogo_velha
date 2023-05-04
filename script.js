@@ -30,6 +30,9 @@ for(let i = 0; i < boxes.length; i++){
             } else {
                 player2++;
             }
+
+            //checa quem venceu
+            checkWinCondition();
         }
     });
 }
@@ -45,3 +48,8 @@ function checkEl(player1, player2){
     }
     return el;
 }   
+
+//ver quem ganhou 
+function checkWinCondition(){
+
+}
