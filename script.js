@@ -16,18 +16,32 @@ for(let i = 0; i < boxes.length; i++){
     //quando alguem clica na caixa
     boxes[i].addEventListener("click", function() {
         
-        let el;
-        console.log(el)
-        if(player1 == player2){
-            //x
-            el = x;
-        } else {
-            //o
-            el = o;
+        let el = checkEl(player1, player2);
+
+        //verifica se já tem o x ou o
+        if(this.childNodes.length == 0){
+            let cloneEl = el.cloneNode(true);
+        
+            this.appendChild(cloneEl);
+
+            //COMPUTAR JOGADA
+            if(player1 == player2){
+                player1++;
+            } else {
+                player2++;
+            }
         }
-
-        let cloneEl = el.cloneNode(true);
-
-        this.appendChild(cloneEl);
     });
 }
+
+// ver quem vai jogar
+function checkEl(player1, player2){
+    if(player1 == player2){
+        //x
+        el = x;
+    } else {
+        //o
+        el = o;
+    }
+    return el;
+}   
